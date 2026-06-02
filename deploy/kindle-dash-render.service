@@ -1,0 +1,5 @@
+[Unit]
+Description=Render Kindle dashboard pages
+[Service]
+Type=oneshot
+ExecStart=/opt/kindle-dash/render.sh

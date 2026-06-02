@@ -1,0 +1,8 @@
+[Unit]
+Description=Kindle dashboard HTTP server
+After=network.target
+[Service]
+ExecStart=/usr/bin/python3 -m http.server 8137 --directory /opt/kindle-dash/pages --bind 0.0.0.0
+Restart=always
+[Install]
+WantedBy=multi-user.target

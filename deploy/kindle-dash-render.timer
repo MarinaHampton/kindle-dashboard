@@ -1,0 +1,8 @@
+[Unit]
+Description=Render Kindle dashboard every 15 min
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=30s
+Persistent=true
+[Install]
+WantedBy=timers.target
