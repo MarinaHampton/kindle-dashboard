@@ -92,7 +92,7 @@ def get_weather():
         day = d["daily"]
         return {
             "temp": round(cur["temperature_2m"]),
-            "cond": WMO.get(cur["weather_code"], "—"),
+            "cond": WMO.get(cur["weather_code"], "n/a"),
             "hi": round(day["temperature_2m_max"][0]),
             "lo": round(day["temperature_2m_min"][0]),
         }
@@ -200,7 +200,7 @@ def get_next_event():
     e = ev[0]
     stamp = e["start"].strftime("%a %b %-d") if e["allday"] else \
         e["start"].strftime("%a %-I:%M%p")
-    return f"Next: {stamp} — {e['summary'][:42]}"
+    return f"Next: {stamp} · {e['summary'][:42]}"
 
 
 def draw_combo(path):

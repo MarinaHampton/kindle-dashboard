@@ -62,7 +62,7 @@ function Dashboard:init()
     self.covers_fullscreen = true
     -- Key bindings mirror ReaderPaging's exact format on this build:
     -- triple-nested keydef + explicit event=. (Earlier version was one level
-    -- short and omitted event=, so NOTHING bound — not even exit.)
+    -- short and omitted event=, so NOTHING bound (not even exit).)
     self.key_events = {
         DashNext    = { { { "RPgFwd", "LPgFwd", "Right" } }, event = "DashNext" },
         DashNextAlt = { { { "Down" } },                     event = "DashNext" },
