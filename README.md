@@ -6,7 +6,7 @@ clock, weather, server health, and a calendar agenda, refreshed over wifi.
 
 The device does no real work. A small server renders an 800×600 PNG, and the
 Kindle just downloads and displays it, flipping pages with the physical page
-turn buttons. That split is what makes it reliable on ancient hardware.
+turn buttons.
 
 ```
    SERVER                                       KINDLE
@@ -140,8 +140,6 @@ device pull, roughly 30 to 60 seconds. Each refresh does a full e-ink flash, so
 going much below 30 seconds is not worth it.
 
 ## Notes and gotchas
-
-These cost me an evening, so here they are to save you the trouble:
 
 * **ImageWidget caches by filename, not modified time.** Re-downloading
   `page0.png` with the same name shows the stale cached bitmap, so the clock
